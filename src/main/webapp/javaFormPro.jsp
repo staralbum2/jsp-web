@@ -32,8 +32,10 @@ UserRequestDto userDto = new UserRequestDto(username, password, email, name, bir
 UserDao userDao = UserDao.getInstance();
 
 // 1) 중복 아이디 검사
-
-
+	duplCheck(){
+	
+}
+ 
 // 2) 중복 이메일 검사
 // 3) 중복 연락처 검사
 
@@ -48,7 +50,7 @@ if(true){
 	// 통과하면 -> loginForm.jsp 페이지 이동
 	userDao.createUser(userDto);
 	request.sendRedirect("/loginForm.jsp");
-	// 단순 페이지 이동처리를 할 경우, request 객체를 
+	// 단순 페이지 이동처리를 할 경우, request 객체를 들고 가지 못함
 }
 
 
